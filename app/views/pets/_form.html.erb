@@ -1,0 +1,39 @@
+
+<div class="form_box">
+  <%= simple_form_for (pet), wrapper: :horizontal_form do |f| %>
+    <%= f.label :"Espece" %>
+    <%= f.input :species, collection:["Chien", "Chat","Autre"], label: false  %>
+
+    <%= f.label :Nom %>
+    <%= f.input :name, label: false  %>
+
+    <%= f.label :"Ok avec" %>
+    <%= f.input :ok, label: false %>
+
+    <%= f.label :"Pas Ok avec" %>
+    <%= f.input :not, label: false %>
+
+    <%= f.label :Sexe  %>
+    <%= f.input :gender, collection: [ "Mâle", "Femelle","Autre"], label: false%>
+
+    <%= f.label :Race %>
+    <%= f.input :race, label: false %>
+
+    <%= f.label :Age %>
+    <%= f.input :age, as: :integer, label: false %>
+
+    <%= f.label :"Taille adulte" %>
+    <%= f.input :heigth, collection:["Petit", "Moyen", "Grand", "Très grand", "Autre"],  label: false %>
+
+    <%= f.label :Couleur %>
+    <%= f.input :color, label: false %>
+
+    <%= f.label :"Déjà adopté?" %>
+    <%= f.input :adopted,  as: :boolean, label: false %>
+
+    <%= f.label :Commentaire %>
+    <%= f.input :comment, as: :text, label: false %>
+
+    <%= f.button :submit, class: "btn-primary", value: "Sauvegarder" %>
+  <% end %>
+</div>
